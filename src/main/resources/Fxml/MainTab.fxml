@@ -32,7 +32,5 @@
             <fx:include source="GradeTab.fxml"/>
          </content>
       </Tab>
-
-
    </tabs>
 </TabPane>

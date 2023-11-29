@@ -68,7 +68,7 @@ public class ProjectController extends Node implements Initializable {
     public ObservableList<Project> getProject(){
         ObservableList<Project> projects = FXCollections.observableArrayList();
 
-        String query = "select * from data.Project;";
+        String query = "select * from sql11666264.Project;";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(query);
@@ -107,7 +107,7 @@ public class ProjectController extends Node implements Initializable {
     @FXML
     void creatStudent(ActionEvent event) {
 
-        String insert = "insert into data.Project(nameSubject,topic,dateRemisePreview) values(?,?,?)";
+        String insert = "insert into sql11666264.Project(nameSubject,topic,dateRemisePreview) values(?,?,?)";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(insert);
@@ -143,7 +143,7 @@ public class ProjectController extends Node implements Initializable {
 
     @FXML
     void deleteStudent(ActionEvent event) {
-        String delete = "delete from data.Project where idProject = ?";
+        String delete = "delete from sql11666264.Project where idProject = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(delete);
@@ -160,7 +160,7 @@ public class ProjectController extends Node implements Initializable {
     @FXML
     void updateStudent(ActionEvent event) {
 
-        String update = "update data.Project set nameSubject = ?, topic = ?, dateRemisePreview = ? where idProject = ?";
+        String update = "update sql11666264.Project set nameSubject = ?, topic = ?, dateRemisePreview = ? where idProject = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(update);

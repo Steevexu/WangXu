@@ -6,11 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Projet" />
         <module name="crudApp" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Projet" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

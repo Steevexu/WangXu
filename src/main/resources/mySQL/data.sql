@@ -1,13 +1,13 @@
 -- Delete the table if already exist
-DROP DATABASE IF EXISTS data;
+DROP DATABASE IF EXISTS sql11666264;
 -- Create a new database
-CREATE DATABASE data;
+CREATE DATABASE sql11666264;
 -- Use our Database
-USE data;
+USE sql11666264;
 
 
 -- Table Formations
-CREATE TABLE data.Formation (
+CREATE TABLE sql11666264.Formation (
     idFormation INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255)NOT NULL,
     promotion VARCHAR(255)NOT NULL,
@@ -18,17 +18,16 @@ CREATE TABLE data.Formation (
 );
 
 -- Table Students
-CREATE TABLE data.Student (
+CREATE TABLE sql11666264.Student (
     idStudent INT AUTO_INCREMENT PRIMARY KEY,
     lastName VARCHAR(255) NOT NULL,
     firstName VARCHAR(255) NOT NULL,
-    nameFormation VARCHAR(255) NOT NULL,
-    idFormation INT,
+    idFormation INT NOT NULL,
     FOREIGN KEY (idFormation) REFERENCES Formation(idFormation)
 );
 
 -- Table Projects
-CREATE TABLE data.Project (
+CREATE TABLE sql11666264.Project (
     idProject INT AUTO_INCREMENT PRIMARY KEY,
     nameSubject VARCHAR(255) NOT NULL,
     topic VARCHAR(255) NOT NULL,
@@ -36,7 +35,7 @@ CREATE TABLE data.Project (
 );
 
 -- Table Pairs
-CREATE TABLE data.Pair (
+CREATE TABLE sql11666264.Pair (
     idProject INT,
     numberRelative INT,
     student1 INT,
@@ -49,7 +48,7 @@ CREATE TABLE data.Pair (
 );
 
 -- Table Grades
-CREATE TABLE data.Grade (
+CREATE TABLE sql11666264.Grade (
     idProject INT,
     NumberPair INT,
     gradeReport FLOAT NOT NULL,

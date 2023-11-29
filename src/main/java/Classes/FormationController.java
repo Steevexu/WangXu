@@ -67,7 +67,7 @@ public class FormationController extends Node implements Initializable{
     public ObservableList<Formation> getFormation(){
         ObservableList<Formation> formations = FXCollections.observableArrayList();
 
-        String query = "select * from data.formation;";
+        String query = "select * from sql11666264.Formation;";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(query);
@@ -104,7 +104,7 @@ public class FormationController extends Node implements Initializable{
     @FXML
     void creatFormation(ActionEvent event) {
 
-        String insert = "insert into data.formation(name,promotion) values(?,?)";
+        String insert = "insert into sql11666264.Formation(name,promotion) values(?,?)";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(insert);
@@ -137,7 +137,7 @@ public class FormationController extends Node implements Initializable{
 
     @FXML
     void deleteFormation(ActionEvent event) {
-        String delete = "delete from data.formation where idFormation = ?";
+        String delete = "delete from sql11666264.Formation where idFormation = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(delete);
@@ -154,7 +154,7 @@ public class FormationController extends Node implements Initializable{
     @FXML
     void updateFormation(ActionEvent event) {
 
-        String update = "update data.formation set name = ?, promotion = ? where idFormation = ?";
+        String update = "update sql11666264.Formation set name = ?, promotion = ? where idFormation = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(update);

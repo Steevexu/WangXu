@@ -73,7 +73,7 @@ public class PairController implements Initializable {
     public ObservableList<Pair> getPairs() {
         ObservableList<Pair> pairs = FXCollections.observableArrayList();
 
-        String query = "SELECT * FROM data.Pair;";
+        String query = "SELECT * FROM sql11666264.Pair;";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(query);
@@ -109,7 +109,7 @@ public class PairController implements Initializable {
 
     @FXML
     void creatStudent(ActionEvent event) {
-        String insert = "INSERT INTO data.Pair(idProject, numberRelative, student1, student2) VALUES (?,?,?,?)";
+        String insert = "INSERT INTO sql11666264.Pair(idProject, numberRelative, student1, student2) VALUES (?,?,?,?)";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(insert);
@@ -140,7 +140,7 @@ public class PairController implements Initializable {
 
     @FXML
     void deleteStudent(ActionEvent event) {
-        String delete = "DELETE FROM data.Pair WHERE idProject = ? AND numberRelative = ?";
+        String delete = "DELETE FROM sql11666264.Pair WHERE idProject = ? AND numberRelative = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(delete);
@@ -163,7 +163,7 @@ public class PairController implements Initializable {
 
     @FXML
     void updateStudent(ActionEvent event) {
-        String update = "UPDATE data.Pair SET student1 = ?, student2 = ? WHERE idProject = ? AND numberRelative = ?";
+        String update = "UPDATE sql11666264.Pair SET student1 = ?, student2 = ? WHERE idProject = ? AND numberRelative = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(update);
