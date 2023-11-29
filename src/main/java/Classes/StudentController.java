@@ -45,7 +45,7 @@ public class StudentController extends Node implements Initializable {
     private TextField tLastName;
 
     @FXML
-    private TextField tnameFormation;
+    private TextField tidFormation;
 
     @FXML
     private TableColumn<Student, String> colfName;
@@ -54,7 +54,7 @@ public class StudentController extends Node implements Initializable {
     private TableColumn<Student, Integer> colid;
 
     @FXML
-    private TableColumn<Student, String> colNameForm;
+    private TableColumn<Student, Integer> colidForm;
 
     @FXML
     private TableColumn<Student, String> collName;
@@ -71,7 +71,7 @@ public class StudentController extends Node implements Initializable {
     public ObservableList<Student> getStudent(){
         ObservableList<Student> student = FXCollections.observableArrayList();
 
-        String query = "select * from data.student;";
+        String query = "select * from sql11666264.Student;";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(query);
@@ -81,7 +81,7 @@ public class StudentController extends Node implements Initializable {
                 st.setIdStudent(rs.getInt("IdStudent"));
                 st.setFirstName(rs.getString("firstName"));
                 st.setLastName(rs.getString("lastName"));
-                st.setFormation(rs.getString("nameFormation"));
+                st.setFormation(rs.getInt("idFormation"));
                 student.add(st);
             }
         } catch (SQLException e) {
@@ -97,7 +97,7 @@ public class StudentController extends Node implements Initializable {
         colid.setCellValueFactory(new PropertyValueFactory<Student,Integer>("idStudent"));
         colfName.setCellValueFactory(new PropertyValueFactory<Student,String>("FirstName"));
         collName.setCellValueFactory(new PropertyValueFactory<Student,String>("LastName"));
-        colNameForm.setCellValueFactory(new PropertyValueFactory<Student,String>("formation"));
+        colidForm.setCellValueFactory(new PropertyValueFactory<Student,Integer>("formation"));
     }
 
 
@@ -110,13 +110,13 @@ public class StudentController extends Node implements Initializable {
     @FXML
     void creatStudent(ActionEvent event) {
 
-        String insert = "insert into data.student(firstname,lastname,nameFormation) values(?,?,?)";
+        String insert = "insert into sql11666264.Student(firstname,lastname,idFormation) values(?,?,?)";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(insert);
             st.setString(1,tFName.getText());
             st.setString(2,tLastName.getText());
-            st.setString(3,tnameFormation.getText());
+            st.setInt(3, Integer.parseInt(tidFormation.getText()));
             st.executeUpdate();
             clear();
             showStudents();
@@ -132,7 +132,7 @@ public class StudentController extends Node implements Initializable {
         idStudent = student.getIdStudent();
         tFName.setText(student.getFirstName());
         tLastName.setText(student.getLastName());
-        tnameFormation.setText(student.getFormation());
+        tidFormation.setText(String.valueOf(student.getFormation()));
         btnSave.setDisable(true);
 
     }
@@ -140,7 +140,7 @@ public class StudentController extends Node implements Initializable {
     void clear() {
         tFName.setText(null);
         tLastName.setText(null);
-        tnameFormation.setText(null);
+        tidFormation.setText(null);
         btnSave.setDisable(false);
 
     }
@@ -148,7 +148,7 @@ public class StudentController extends Node implements Initializable {
 
     @FXML
     void deleteStudent(ActionEvent event) {
-        String delete = "delete from data.student where idStudent = ?";
+        String delete = "delete from sql11666264.Student where idStudent = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(delete);
@@ -165,13 +165,13 @@ public class StudentController extends Node implements Initializable {
     @FXML
     void updateStudent(ActionEvent event) {
 
-        String update = "update data.student set FirstName = ?, LastName = ?, NameFormation = ? where idStudent = ?";
+        String update = "update sql11666264.Student set FirstName = ?, LastName = ?, idFormation = ? where idStudent = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(update);
             st.setString(1,tFName.getText());
             st.setString(2,tLastName.getText());
-            st.setString(3,tnameFormation.getText());
+            st.setInt(3, Integer.parseInt(tidFormation.getText()));
             st.setInt(4,idStudent);
             st.executeUpdate();
             showStudents();

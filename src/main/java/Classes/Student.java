@@ -4,7 +4,7 @@ public class Student {
     private int idStudent;
     private String lastName;
     private String firstName;
-    private String formation;
+    private int formation;
 
     // Getters et Setters
 
@@ -32,11 +32,11 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public String getFormation() {
+    public int getFormation() {
         return formation;
     }
 
-    public void setFormation(String formation) {
+    public void setFormation(int formation) {
         this.formation = formation;
     }
 }

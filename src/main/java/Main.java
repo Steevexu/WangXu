@@ -1,5 +1,4 @@
 import Classes.Pair;
-
 import java.time.LocalDate;
 
 public class Main {

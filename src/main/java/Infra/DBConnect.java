@@ -4,11 +4,11 @@ import java.sql.*;
 
 public class DBConnect {
 
-    static String user = "root";
+    static String user = "sql11666264";
 
-    static String password = "0000";
+    static String password = "uizAFKiAEA";
 
-    static String url = "jdbc:mysql://localhost:3306";
+    static String url = "jdbc:mysql://sql11.freesqldatabase.com:3306/sql11666264";
 
     static String driver = "com.mysql.cj.jdbc.Driver";
 

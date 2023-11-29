@@ -89,7 +89,7 @@ public class GradeController extends Node implements Initializable {
     public ObservableList<Grade> getGrade() {
         ObservableList<Grade> grades = FXCollections.observableArrayList();
 
-        String query = "select * from data.Grade;";
+        String query = "select * from sql11666264.Grade;";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(query);
@@ -129,7 +129,7 @@ public class GradeController extends Node implements Initializable {
 
     @FXML
     void creatStudent(ActionEvent event) {
-        String insert = "INSERT INTO data.Grade (idProject, NumberPair, gradeReport, gradeOral1, gradeOral2, dateReturnEffectiveReport) VALUES (?, ?, ?, ?, ?, ?)";
+        String insert = "INSERT INTO sql11666264.Grade (idProject, NumberPair, gradeReport, gradeOral1, gradeOral2, dateReturnEffectiveReport) VALUES (?, ?, ?, ?, ?, ?)";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(insert);
@@ -173,7 +173,7 @@ public class GradeController extends Node implements Initializable {
 
     @FXML
     void deleteStudent(ActionEvent event) {
-        String delete = "delete from data.Grade where idProject = ?";
+        String delete = "delete from sql11666264.Grade where idProject = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(delete);
@@ -188,7 +188,7 @@ public class GradeController extends Node implements Initializable {
 
     @FXML
     void updateStudent(ActionEvent event) {
-        String update = "update data.Grade set NumberPair = ?, gradeReport = ?, gradeOral1 = ?, gradeOral2 = ?, dateReturnEffectiveReport = ? where idProject = ?";
+        String update = "update sql11666264.Grade set NumberPair = ?, gradeReport = ?, gradeOral1 = ?, gradeOral2 = ?, dateReturnEffectiveReport = ? where idProject = ?";
         con = DBConnect.getCon();
         try {
             st = con.prepareStatement(update);

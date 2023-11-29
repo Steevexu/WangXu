@@ -15,7 +15,7 @@
     <children>
         <VBox layoutX="14.0" layoutY="95.0" prefHeight="300.0" prefWidth="300.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="95.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IDProject" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Project" />
                 <TextField fx:id="tidProject1" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Pair" />
                 <TextField fx:id="tNumberRelative" />

@@ -19,8 +19,8 @@
                         <TextField fx:id="tFName" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
                         <TextField fx:id="tLastName" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name Formation" />
-                        <TextField fx:id="tnameFormation" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Formation" />
+                        <TextField fx:id="tidFormation" />
                     </children>
                 </VBox>
                 <TableView fx:id="table" layoutX="386.0" layoutY="110.0" onMouseClicked="#getData" prefHeight="260.0" prefWidth="473.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="120.0">
@@ -28,7 +28,7 @@
                         <TableColumn fx:id="colid" prefWidth="91.0" text="ID Student" />
                         <TableColumn fx:id="colfName" prefWidth="139.0" text="First Name" />
                         <TableColumn fx:id="collName" prefWidth="111.0" text="Last Name" />
-                        <TableColumn fx:id="colNameForm" prefWidth="131.0" text="Name Formation" />
+                        <TableColumn fx:id="colidForm" prefWidth="131.0" text="ID Formation" />
                     </columns>
                 </TableView>
                 <Label alignment="CENTER" layoutX="299.0" layoutY="37.0" prefHeight="35.0" prefWidth="279.0" styleClass="title" text="CRUD STUDENTS" AnchorPane.topAnchor="37.0" />
