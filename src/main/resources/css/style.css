@@ -1,0 +1,43 @@
+.title {
+    -fx-font-size: 2.5em;
+    -fx-text-fill: #00bcd4; /* Bleu cyan */
+    -fx-font-weight: bold;
+}
+
+.form_container {
+    -fx-background-color: #263238; /* Gris foncé */
+}
+
+.form_container Text {
+    -fx-font-size: 1.2em;
+    -fx-fill: #90a4ae; /* Gris clair */
+}
+
+.form_container VBox {
+    -fx-border-width: 0 0 0 1;
+    -fx-border-color: #546e7a; /* Gris bleuté */
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.form_container TextField {
+    -fx-pref-height: 35;
+    -fx-background-color: #37474f; /* Gris-bleu foncé */
+    -fx-font-size: 1.3em;
+    -fx-effect: dropshadow(three-pass-box, #00bcd4, 10, 0, 0, 0); /* Ombre cyan */
+    -fx-text-fill: #eceff1; /* Blanc grisâtre */
+}
+
+.form_container Button {
+    -fx-background-color: linear-gradient(to right, #0288d1, #00bcd4); /* Dégradé bleu cyan */
+    -fx-effect: dropshadow(three-pass-box, #00bcd4, 10, 0, 0, 0); /* Ombre cyan */
+    -fx-pref-width: 100;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #eceff1; /* Blanc grisâtre */
+}
+
+.form_container Button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(to right, #0277bd, #00acc1); /* Dégradé bleu cyan plus foncé au survol */
+}
