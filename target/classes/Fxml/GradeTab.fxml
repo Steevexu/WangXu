@@ -15,9 +15,9 @@
     <children>
         <VBox layoutX="14.0" layoutY="20.0" prefHeight="300.0" prefWidth="300.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IDProject" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Project" />
                 <TextField fx:id="tidProject" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NumberPair" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Pair" />
                 <TextField fx:id="tNumberPair" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Grade" />
                 <TextField fx:id="tReportGrade" />
@@ -31,8 +31,8 @@
         </VBox>
         <TableView fx:id="table2" layoutX="386.0" layoutY="110.0" onMouseClicked="#getData" prefHeight="260.0" prefWidth="473.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="120.0">
             <columns>
-                <TableColumn fx:id="colidproject" prefWidth="68.0" text="IDProject" />
-                <TableColumn fx:id="colNumberPair" prefWidth="76.0" text="NumberPair" />
+                <TableColumn fx:id="colidproject" prefWidth="68.0" text="ID Project" />
+                <TableColumn fx:id="colNumberPair" prefWidth="76.0" text="ID Pair" />
                 <TableColumn fx:id="colReportGrade" prefWidth="83.0" text="Report Grade" />
                 <TableColumn fx:id="colOralGrade1" prefWidth="84.0" text="Oral Grade 1" />
                 <TableColumn fx:id="colOralGrade2" prefWidth="75.0" text="Oral Grade 2" />
@@ -45,7 +45,7 @@
                 <Button fx:id="btnSave11" mnemonicParsing="false" onAction="#creatStudent" text="Save" />
                 <Button fx:id="btnUpdate11" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
                 <Button fx:id="btnDelete11" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#deleteStudent" text="Delete" />
-                <Button fx:id="btnClear11" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearField" text="Clear" />
+                <Button fx:id="btnClear11" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearField" text="Create" />
             </buttons>
         </ButtonBar>
     </children>

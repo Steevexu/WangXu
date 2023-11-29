@@ -37,7 +37,7 @@
                 <Button fx:id="btnSave12" mnemonicParsing="false" onAction="#creatStudent" text="Save" />
                 <Button fx:id="btnUpdate12" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
                 <Button fx:id="btnDelete12" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#deleteStudent" text="Delete" />
-                <Button fx:id="btnClear12" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearField" text="Clear" />
+                <Button fx:id="btnClear12" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearField" text="Create" />
             </buttons>
         </ButtonBar>
     </children>

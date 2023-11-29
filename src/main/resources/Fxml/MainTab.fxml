@@ -22,16 +22,17 @@
             <fx:include source="ProjectTab.fxml"/>
          </content>
       </Tab>
-      <Tab fx:id="tabGrade" text="Grade">
-         <content>
-            <fx:include source="GradeTab.fxml"/>
-         </content>
-      </Tab>
       <Tab fx:id="tabPair" text="Pair">
          <content>
             <fx:include source="PairTab.fxml"/>
          </content>
       </Tab>
+      <Tab fx:id="tabGrade" text="Grade">
+         <content>
+            <fx:include source="GradeTab.fxml"/>
+         </content>
+      </Tab>
+
 
    </tabs>
 </TabPane>

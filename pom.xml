@@ -30,6 +30,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
             </plugin>
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -71,6 +72,7 @@
             <artifactId>javafx-fxml</artifactId>
             <version>21-ea+21</version>
         </dependency>
+
 
     </dependencies>
 

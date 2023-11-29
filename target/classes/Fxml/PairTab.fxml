@@ -17,7 +17,7 @@
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IDProject" />
                 <TextField fx:id="tidProject1" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number Relative" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Pair" />
                 <TextField fx:id="tNumberRelative" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student 1" />
                 <TextField fx:id="tStudent1" />
@@ -28,7 +28,7 @@
         <TableView fx:id="table3" layoutX="386.0" layoutY="110.0" onMouseClicked="#getData" prefHeight="260.0" prefWidth="473.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="120.0">
             <columns>
                 <TableColumn fx:id="colidproject1" prefWidth="91.0" text="ID Project" />
-                <TableColumn fx:id="colNumberRelative" prefWidth="139.0" text="Number Relative" />
+                <TableColumn fx:id="colNumberRelative" prefWidth="139.0" text="ID Pair" />
                 <TableColumn fx:id="colStudent1" prefWidth="111.0" text="Student 1" />
                 <TableColumn fx:id="colStudent2" prefWidth="131.0" text="Student 2" />
             </columns>
@@ -39,7 +39,7 @@
                 <Button fx:id="btnSave111" mnemonicParsing="false" onAction="#creatStudent" text="Save" />
                 <Button fx:id="btnUpdate111" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
                 <Button fx:id="btnDelete111" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#deleteStudent" text="Delete" />
-                <Button fx:id="btnClear111" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearField" text="Clear" />
+                <Button fx:id="btnClear111" layoutX="344.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearField" text="Create" />
             </buttons>
         </ButtonBar>
     </children>

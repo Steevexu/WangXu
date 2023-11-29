@@ -1,4 +1,3 @@
-import Classes.Formation;
 import Classes.Pair;
 
 import java.time.LocalDate;
