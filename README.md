@@ -1,11 +1,9 @@
 # Wang Nick / Xu Steeve
 
-#### Pour compiler le programme, entrez dans le terminal de commande :
+#### Pour préparer le lancement :
 
-"cd Projet\src\main\java\Interface"
+"cd Projet\target" pour avoir le chemin du .jar
 
-"javac MainFx.java"
+#### Pour exécuter le programme .jar, entrez dans l'invite de commande (cmd): 
 
-#### Pour exécuter le programme, entrez : 
-
-"java MainFx.java"
+"java -jar crudApp-1.0-SNAPSHOT-jar-with-dependencies.jar"
